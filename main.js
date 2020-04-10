@@ -52,7 +52,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link href=\"http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n\n<div class=\"wrapper\">\n    <nav class = \"d-none d-sm-block\" id=\"sidebar\" [ngClass] = \"{ 'active': navbarOpen }\">\n        <div id=\"dismiss\">\n            <i (click) = \"toggleNavbar()\" class=\"fa fa-arrow-left fa-align-justify\"></i>\n        </div>\n        <div class=\"sidebar-header\">\n            <h3>Myriathon</h3>\n        </div>\n        <ul class=\"list-unstyled components\">\n        <div>\n            <p style = \"margin: 0px; padding-bottom: 0px;\">Myriathon Rescue:</p>\n            <p>June 11-14</p>\n        </div>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['home']\">Home</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['marathons']\">Marathons</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['rescue']\">Rescue</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['videos']\">Videos</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['about']\">About</a>\n        </li>\n        <li>\n            <a [routerLink] = \"['admin']\">Admin</a>\n        </li>\n        </ul>\n    </nav>\n    <div id = \"content\">\n        <nav id = \"topNav\" class=\"navbar navbar-expand-lg navbar-light bg-light\">\n            <div class=\"container-fluid\">\n                <button (click) = \"toggleNavbar()\" type=\"button\" id=\"sidebarNotCollapse\" class=\"btn d-none d-sm-block\">\n                    <i class=\"fa fa-arrow-right fa-align-justify\"></i>\n                </button>\n                <button [attr.aria-expanded] = \"hamburgerOpen\" class=\"btn btn-dark d-inline-block d-sm-none ml-auto\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                    <i (click) = \"toggleHamburger()\" class=\"fa fa-bars fa-align-justify\"></i>\n                </button>\n                <div [ngClass] = \"{ 'show': hamburgerOpen }\" class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                <ul class=\"nav navbar-nav ml-auto\">\n                    <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                        <a class=\"nav-link\" [routerLink] = \"['home']\">Home</a>\n                    </li>\n                    <li  class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                        <a class=\"nav-link\" [routerLink] = \"['marathons']\">Marathons</a>\n                    </li>\n                    <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                        <a class=\"nav-link\" [routerLink] = \"['rescue']\">Rescue</a>\n                    </li>\n                    <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                        <a class=\"nav-link\" [routerLink] = \"['videos']\">Videos</a>\n                    </li>\n                    <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                        <a class=\"nav-link\" [routerLink] = \"['about']\">About</a>\n                    </li>\n                </ul>\n            </div>\n            </div>\n        </nav>\n        <router-outlet></router-outlet>\n        <footer class = \"d-flex justify-content-center footer\">\n            <div id = \"footer-text\" class = \"d-flex justify-content-center container\">\n                <span class = \"text-muted\">Copyright 2020</span>\n            </div>\n            <div class = \"d-flex justify-content-center container\">\n                <a href = \"#\">\n                    <img src = \"assets/img/twitter_icon.png\">\n                </a>\n                <a href = \"#\">\n                    <img src = \"assets/img/twitch_icon.png\">\n                </a>\n                <a href = \"#\">\n                    <img src = \"assets/img/discord_icon.png\">\n                </a>\n            </div>\n        </footer>\n    </div>\n</div>\n<div class=\"overlay\"></div>\n\n<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>\n<script type=\"text/javascript\">\n    $(document).ready(function () {\n        $(\"#sidebar\").mCustomScrollbar({\n            theme: \"minimal\"\n        });\n\n        $('#dismiss, .overlay').on('click', function () {\n            $('#sidebar').removeClass('active');\n            $('.overlay').removeClass('active');\n        });\n\n        $('#sidebarCollapse').on('click', function () {\n            $('#sidebar').addClass('active');\n            $('.overlay').addClass('active');\n            $('.collapse.in').toggleClass('in');\n            $('a[aria-expanded=true]').attr('aria-expanded', 'false');\n        });\n    });\n</script>\n</body>"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link href=\"http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n\n<div class=\"wrapper\">\n    <nav class = \"d-none d-sm-block\" id=\"sidebar\" [ngClass] = \"{ 'active': navbarOpen }\">\n        <div id=\"dismiss\">\n            <i (click) = \"toggleNavbar()\" class=\"fa fa-arrow-left fa-align-justify\"></i>\n        </div>\n        <div ng class=\"sidebar-header\">\n            <h3>Myriathon</h3>\n        </div>\n        <ul class=\"list-unstyled components\">\n        <div *ngIf = \"session\">\n            <p style = \"margin: 0px; padding-bottom: 0px;\">Welcome!</p>\n            <p>{{session.username}}</p>\n        </div>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['home']\">Home</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['marathons']\">Marathons</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['rescue']\">Rescue</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['videos']\">Videos</a>\n        </li>\n        <li [routerLinkActive] = \"['active']\">\n            <a [routerLink] = \"['about']\">About</a>\n        </li>\n        <div>\n            <button style=\"position: absolute; left: 0; bottom: 0;\" class=\"btn btn-danger btn-block\" *ngIf=\"session\" (click) = \"logout()\">Logout</button>\n        </div>\n        </ul>\n    </nav>\n    <div id = \"content\">\n        <nav id = \"topNav\" class=\"navbar navbar-expand-lg navbar-light bg-light\">\n            <div class=\"container-fluid\">\n                <button (click) = \"toggleNavbar()\" type=\"button\" id=\"sidebarNotCollapse\" class=\"btn d-none d-sm-block\">\n                    <i class=\"fa fa-arrow-right fa-align-justify\"></i>\n                </button>\n                <button [attr.aria-expanded] = \"hamburgerOpen\" class=\"btn btn-dark d-inline-block d-sm-none ml-auto\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                    <i (click) = \"toggleHamburger()\" class=\"fa fa-bars fa-align-justify\"></i>\n                </button>\n                <div [ngClass] = \"{ 'show': hamburgerOpen }\" class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                    <div *ngIf = \"session\" class = \"d-block d-sm-block d-md-none\">\n                        <p>{{session.username}}</p>\n                    </div>\n                    <ul class=\"nav navbar-nav ml-auto\">\n                        <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                            <a class=\"nav-link\" [routerLink] = \"['home']\">Home</a>\n                        </li>\n                        <li  class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                            <a class=\"nav-link\" [routerLink] = \"['marathons']\">Marathons</a>\n                        </li>\n                        <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                            <a class=\"nav-link\" [routerLink] = \"['rescue']\">Rescue</a>\n                        </li>\n                        <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                            <a class=\"nav-link\" [routerLink] = \"['videos']\">Videos</a>\n                        </li>\n                        <li class=\"nav-item\" [routerLinkActive] = \"['active']\">\n                            <a class=\"nav-link\" [routerLink] = \"['about']\">About</a>\n                        </li>\n                        <li class = nav-item>\n                            <div *ngIf = \"session\" class = \"d-block d-sm-block d-md-none\">\n                                <button id = \"logout-button-block\" class=\"btn btn-danger btn-block\" *ngIf=\"session\" (click) = \"logout()\">Logout</button>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </nav>\n        <router-outlet></router-outlet>\n        <footer class = \"d-flex justify-content-center footer\">\n            <div id = \"footer-text\" class = \"d-flex justify-content-center container\">\n                <span class = \"text-muted\">Copyright 2020</span>\n            </div>\n            <div class = \"d-flex justify-content-center container\">\n                <a href = \"#\">\n                    <img src = \"assets/img/twitter_icon.png\">\n                </a>\n                <a href = \"#\">\n                    <img src = \"assets/img/twitch_icon.png\">\n                </a>\n                <a href = \"#\">\n                    <img src = \"assets/img/discord_icon.png\">\n                </a>\n            </div>\n        </footer>\n    </div>\n</div>\n<div class=\"overlay\"></div>\n\n<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>\n<script type=\"text/javascript\">\n    $(document).ready(function () {\n        $(\"#sidebar\").mCustomScrollbar({\n            theme: \"minimal\"\n        });\n\n        $('#dismiss, .overlay').on('click', function () {\n            $('#sidebar').removeClass('active');\n            $('.overlay').removeClass('active');\n        });\n\n        $('#sidebarCollapse').on('click', function () {\n            $('#sidebar').addClass('active');\n            $('.overlay').addClass('active');\n            $('.collapse.in').toggleClass('in');\n            $('a[aria-expanded=true]').attr('aria-expanded', 'false');\n        });\n    });\n</script>\n</body>"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>Recent Video</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <router-outlet></router-outlet>\n    </div>\n</body>\n\n"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>Recent Video</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown button\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of allSeasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of allSeasons[activeSeasonNumber-1].videos\" class = \"col\">\n                    <div class=\"card\" style=\"width: 18rem;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n\n"
 
 /***/ }),
 
@@ -135,18 +135,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let AboutPageModuleComponent = class AboutPageModuleComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
     }
 };
 AboutPageModuleComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 AboutPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -196,11 +218,14 @@ let AdminLoginModuleComponent = class AdminLoginModuleComponent {
         this.falseMessage = "-- ERROR: You've encountered an issue --";
         this.serverError = "";
         this.displayFalseMessage = false;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
         this.newUser = { newUsername: "", newEmail: "", newPassword: "", newSecretMessage: "" };
         this.loginUser = { email: "", password: "" };
         this.displayFalseMessage = false;
+        this.checkSession();
+        this.receiveMessage(this.session);
     }
     onLogin() {
         console.log("We are in the login function");
@@ -214,6 +239,7 @@ let AdminLoginModuleComponent = class AdminLoginModuleComponent {
             else {
                 console.log("Success!", data);
                 this.session = data['user'];
+                this.router.navigateByUrl('home');
             }
             this.loginUser = { email: "", password: "" };
         });
@@ -232,6 +258,21 @@ let AdminLoginModuleComponent = class AdminLoginModuleComponent {
                 this.session = data['user'];
             }
             this.newUser = { newUsername: "", newEmail: "", newPassword: "", newSecretMessage: "" };
+        });
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
         });
     }
 };
@@ -308,7 +349,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n@import \"https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700\";\n/*\n    DEMO STYLE\n*/\nbody {\n    font-family: 'Poppins', sans-serif;\n    background: #fafafa;\n}\np {\n    font-family: 'Poppins', sans-serif;\n    font-size: 1.1em;\n    font-weight: 300;\n    line-height: 1.7em;\n    color: #999;\n}\na,\na:hover,\na:focus {\n    color: inherit;\n    text-decoration: none;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n}\n.navbar {\n    padding: 15px 10px;\n    background: #fff;\n    border: none;\n    border-radius: 0;\n    margin-bottom: 40px;\n    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);\n}\n.navbar-btn {\n    box-shadow: none;\n    outline: none !important;\n    border: none;\n}\n.line {\n    width: 100%;\n    height: 1px;\n    border-bottom: 1px dashed #ddd;\n    margin: 40px 0;\n}\n/* ---------------------------------------------------\n    SIDEBAR STYLE\n----------------------------------------------------- */\n#sidebar {\n    width: 250px;\n    position: fixed;\n    top: 0;\n    left: -250px;\n    height: 100vh;\n    z-index: 999;\n    background: #7386D5;\n    color: #fff;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n    overflow-y: scroll;\n    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);\n}\n#sidebar.active {\n    left: 0;\n}\n#dismiss {\n    width: 35px;\n    height: 35px;\n    line-height: 35px;\n    text-align: center;\n    background: #7386D5;\n    position: absolute;\n    top: 10px;\n    right: 10px;\n    cursor: pointer;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n}\n#dismiss:hover {\n    background: #fff;\n    color: #7386D5;\n}\n.overlay {\n    display: none;\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    background: rgba(0, 0, 0, 0.7);\n    z-index: 998;\n    opacity: 0;\n    -webkit-transition: all 0.5s ease-in-out;\n    transition: all 0.5s ease-in-out;\n}\n.overlay.active {\n    display: block;\n    opacity: 1;\n}\n#sidebar .sidebar-header {\n    padding: 20px;\n    background: #6d7fcc;\n}\n#sidebar ul.components {\n    padding: 20px 0;\n    border-bottom: 1px solid #47748b;\n}\n#sidebar ul p {\n    color: #fff;\n    padding: 10px;\n}\n#sidebar ul li a {\n    padding: 10px;\n    font-size: 1.1em;\n    display: block;\n}\n#sidebar ul li a:hover {\n    color: #7386D5;\n    background: #fff;\n}\n#sidebar ul li.active>a,\na[aria-expanded=\"true\"] {\n    color: #fff;\n    background: #6d7fcc;\n}\na[data-toggle=\"collapse\"] {\n    position: relative;\n}\n.dropdown-toggle::after {\n    display: block;\n    position: absolute;\n    top: 50%;\n    right: 20px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\nul ul a {\n    font-size: 0.9em !important;\n    padding-left: 30px !important;\n    background: #6d7fcc;\n}\nul.CTAs {\n    padding: 20px;\n}\nul.CTAs a {\n    text-align: center;\n    font-size: 0.9em !important;\n    display: block;\n    border-radius: 5px;\n    margin-bottom: 5px;\n}\na.download {\n    background: #fff;\n    color: #7386D5;\n}\na.article,\na.article:hover {\n    background: #6d7fcc !important;\n    color: #fff !important;\n}\n/* ---------------------------------------------------\n    CONTENT STYLE\n----------------------------------------------------- */\n#content {\n    width: 100%;\n    padding: 20px;\n    min-height: 100vh;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n    position: absolute;\n    top: 0;\n    right: 0;\n}\n#topNav\n{\n    /*width: 100%;*/\n}\n#sidebarNotCollapse\n{\n    background-color: #6d7fcc;\n    color: white;\n}\n#sidebarCollapse\n{\n    background-color: #6d7fcc;\n    color: white;\n}\n.footer\n{\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    min-height: 50px;\n    line-height: 50px;\n    background: rgb(248, 249, 250)\n}\n.footer #footer-text\n    {\n        -webkit-box-align: center;\n                align-items: center;\n    }\n.footer img\n    {\n        width: 35px;\n        height: 35px;\n        margin: 1rem 0rem 1rem 1rem;\n    }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFJQSw2RUFBNkU7QUFKN0U7O0NBRUM7QUFHRDtJQUNJLGtDQUFrQztJQUNsQyxtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGtDQUFrQztJQUNsQyxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixXQUFXO0FBQ2Y7QUFFQTs7O0lBR0ksY0FBYztJQUNkLHFCQUFxQjtJQUNyQiw0QkFBb0I7SUFBcEIsb0JBQW9CO0FBQ3hCO0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLDBDQUEwQztBQUM5QztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLHdCQUF3QjtJQUN4QixZQUFZO0FBQ2hCO0FBRUE7SUFDSSxXQUFXO0lBQ1gsV0FBVztJQUNYLDhCQUE4QjtJQUM5QixjQUFjO0FBQ2xCO0FBRUE7O3VEQUV1RDtBQUV2RDtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YsTUFBTTtJQUNOLFlBQVk7SUFDWixhQUFhO0lBQ2IsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsNEJBQW9CO0lBQXBCLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsMENBQTBDO0FBQzlDO0FBRUE7SUFDSSxPQUFPO0FBQ1g7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxXQUFXO0lBQ1gsZUFBZTtJQUNmLDRCQUE0QjtJQUU1QixvQkFBb0I7QUFDeEI7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixjQUFjO0FBQ2xCO0FBRUE7SUFDSSxhQUFhO0lBQ2IsZUFBZTtJQUNmLFlBQVk7SUFDWixhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLFlBQVk7SUFDWixVQUFVO0lBQ1Ysd0NBQWdDO0lBQWhDLGdDQUFnQztBQUNwQztBQUNBO0lBQ0ksY0FBYztJQUNkLFVBQVU7QUFDZDtBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtBQUN2QjtBQUVBO0lBQ0ksZUFBZTtJQUNmLGdDQUFnQztBQUNwQztBQUVBO0lBQ0ksV0FBVztJQUNYLGFBQWE7QUFDakI7QUFFQTtJQUNJLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsY0FBYztBQUNsQjtBQUVBO0lBQ0ksY0FBYztJQUNkLGdCQUFnQjtBQUNwQjtBQUVBOztJQUVJLFdBQVc7SUFDWCxtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztJQUNkLGtCQUFrQjtJQUNsQixRQUFRO0lBQ1IsV0FBVztJQUNYLG1DQUEyQjtZQUEzQiwyQkFBMkI7QUFDL0I7QUFFQTtJQUNJLDJCQUEyQjtJQUMzQiw2QkFBNkI7SUFDN0IsbUJBQW1CO0FBQ3ZCO0FBRUE7SUFDSSxhQUFhO0FBQ2pCO0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsa0JBQWtCO0FBQ3RCO0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztBQUNsQjtBQUVBOztJQUVJLDhCQUE4QjtJQUM5QixzQkFBc0I7QUFDMUI7QUFFQTs7dURBRXVEO0FBRXZEO0lBQ0ksV0FBVztJQUNYLGFBQWE7SUFDYixpQkFBaUI7SUFDakIsNEJBQW9CO0lBQXBCLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLFFBQVE7QUFDWjtBQUVBOztJQUVJLGVBQWU7QUFDbkI7QUFFQTs7SUFFSSx5QkFBeUI7SUFDekIsWUFBWTtBQUNoQjtBQUVBOztJQUVJLHlCQUF5QjtJQUN6QixZQUFZO0FBQ2hCO0FBRUE7O0lBRUksa0JBQWtCO0lBQ2xCLE9BQU87SUFDUCxRQUFRO0lBQ1IsU0FBUztJQUNULFdBQVc7SUFDWCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCO0FBQ0o7QUFFSTs7UUFFSSx5QkFBbUI7Z0JBQW5CLG1CQUFtQjtJQUN2QjtBQUVBOztRQUVJLFdBQVc7UUFDWCxZQUFZO1FBQ1osMkJBQTJCO0lBQy9CIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICAgIERFTU8gU1RZTEVcbiovXG5cbkBpbXBvcnQgXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9UG9wcGluczozMDAsNDAwLDUwMCw2MDAsNzAwXCI7XG5ib2R5IHtcbiAgICBmb250LWZhbWlseTogJ1BvcHBpbnMnLCBzYW5zLXNlcmlmO1xuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XG59XG5cbnAge1xuICAgIGZvbnQtZmFtaWx5OiAnUG9wcGlucycsIHNhbnMtc2VyaWY7XG4gICAgZm9udC1zaXplOiAxLjFlbTtcbiAgICBmb250LXdlaWdodDogMzAwO1xuICAgIGxpbmUtaGVpZ2h0OiAxLjdlbTtcbiAgICBjb2xvcjogIzk5OTtcbn1cblxuYSxcbmE6aG92ZXIsXG5hOmZvY3VzIHtcbiAgICBjb2xvcjogaW5oZXJpdDtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG59XG5cbi5uYXZiYXIge1xuICAgIHBhZGRpbmc6IDE1cHggMTBweDtcbiAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIG1hcmdpbi1ib3R0b206IDQwcHg7XG4gICAgYm94LXNoYWRvdzogMXB4IDFweCAzcHggcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4ubmF2YmFyLWJ0biB7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcbiAgICBvdXRsaW5lOiBub25lICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiBub25lO1xufVxuXG4ubGluZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxcHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IGRhc2hlZCAjZGRkO1xuICAgIG1hcmdpbjogNDBweCAwO1xufVxuXG4vKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICBTSURFQkFSIFNUWUxFXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAqL1xuXG4jc2lkZWJhciB7XG4gICAgd2lkdGg6IDI1MHB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogLTI1MHB4O1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJhY2tncm91bmQ6ICM3Mzg2RDU7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGJveC1zaGFkb3c6IDNweCAzcHggM3B4IHJnYmEoMCwgMCwgMCwgMC4yKTtcbn1cblxuI3NpZGViYXIuYWN0aXZlIHtcbiAgICBsZWZ0OiAwO1xufVxuXG4jZGlzbWlzcyB7XG4gICAgd2lkdGg6IDM1cHg7XG4gICAgaGVpZ2h0OiAzNXB4O1xuICAgIGxpbmUtaGVpZ2h0OiAzNXB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kOiAjNzM4NkQ1O1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDEwcHg7XG4gICAgcmlnaHQ6IDEwcHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgLW8tdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG59XG5cbiNkaXNtaXNzOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgIGNvbG9yOiAjNzM4NkQ1O1xufVxuXG4ub3ZlcmxheSB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgd2lkdGg6IDEwMHZ3O1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjcpO1xuICAgIHotaW5kZXg6IDk5ODtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGVhc2UtaW4tb3V0O1xufVxuLm92ZXJsYXkuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBvcGFjaXR5OiAxO1xufVxuXG4jc2lkZWJhciAuc2lkZWJhci1oZWFkZXIge1xuICAgIHBhZGRpbmc6IDIwcHg7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxuI3NpZGViYXIgdWwuY29tcG9uZW50cyB7XG4gICAgcGFkZGluZzogMjBweCAwO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjNDc3NDhiO1xufVxuXG4jc2lkZWJhciB1bCBwIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuXG4jc2lkZWJhciB1bCBsaSBhIHtcbiAgICBwYWRkaW5nOiAxMHB4O1xuICAgIGZvbnQtc2l6ZTogMS4xZW07XG4gICAgZGlzcGxheTogYmxvY2s7XG59XG5cbiNzaWRlYmFyIHVsIGxpIGE6aG92ZXIge1xuICAgIGNvbG9yOiAjNzM4NkQ1O1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG59XG5cbiNzaWRlYmFyIHVsIGxpLmFjdGl2ZT5hLFxuYVthcmlhLWV4cGFuZGVkPVwidHJ1ZVwiXSB7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxuYVtkYXRhLXRvZ2dsZT1cImNvbGxhcHNlXCJdIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgcmlnaHQ6IDIwcHg7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG51bCB1bCBhIHtcbiAgICBmb250LXNpemU6IDAuOWVtICFpbXBvcnRhbnQ7XG4gICAgcGFkZGluZy1sZWZ0OiAzMHB4ICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxudWwuQ1RBcyB7XG4gICAgcGFkZGluZzogMjBweDtcbn1cblxudWwuQ1RBcyBhIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAwLjllbSAhaW1wb3J0YW50O1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBtYXJnaW4tYm90dG9tOiA1cHg7XG59XG5cbmEuZG93bmxvYWQge1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgY29sb3I6ICM3Mzg2RDU7XG59XG5cbmEuYXJ0aWNsZSxcbmEuYXJ0aWNsZTpob3ZlciB7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYyAhaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG59XG5cbi8qIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgIENPTlRFTlQgU1RZTEVcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICovXG5cbiNjb250ZW50IHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDA7XG4gICAgcmlnaHQ6IDA7XG59XG5cbiN0b3BOYXZcbntcbiAgICAvKndpZHRoOiAxMDAlOyovXG59XG5cbiNzaWRlYmFyTm90Q29sbGFwc2VcbntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmQ3ZmNjO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuI3NpZGViYXJDb2xsYXBzZVxue1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM2ZDdmY2M7XG4gICAgY29sb3I6IHdoaXRlO1xufVxuXG4uZm9vdGVyXG57XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDUwcHg7XG4gICAgbGluZS1oZWlnaHQ6IDUwcHg7XG4gICAgYmFja2dyb3VuZDogcmdiKDI0OCwgMjQ5LCAyNTApXG59XG5cbiAgICAuZm9vdGVyICNmb290ZXItdGV4dFxuICAgIHtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB9XG5cbiAgICAuZm9vdGVyIGltZ1xuICAgIHtcbiAgICAgICAgd2lkdGg6IDM1cHg7XG4gICAgICAgIGhlaWdodDogMzVweDtcbiAgICAgICAgbWFyZ2luOiAxcmVtIDByZW0gMXJlbSAxcmVtO1xuICAgIH0iXX0= */"
+module.exports = "\n\n@import \"https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700\";\n/*\n    DEMO STYLE\n*/\nbody {\n    font-family: 'Poppins', sans-serif;\n    background: #fafafa;\n}\np {\n    font-family: 'Poppins', sans-serif;\n    font-size: 1.1em;\n    font-weight: 300;\n    line-height: 1.7em;\n    color: #999;\n}\na,\na:hover,\na:focus {\n    color: inherit;\n    text-decoration: none;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n}\n.navbar {\n    padding: 15px 10px;\n    background: #fff;\n    border: none;\n    border-radius: 0;\n    margin-bottom: 40px;\n    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);\n}\n.navbar-btn {\n    box-shadow: none;\n    outline: none !important;\n    border: none;\n}\n.line {\n    width: 100%;\n    height: 1px;\n    border-bottom: 1px dashed #ddd;\n    margin: 40px 0;\n}\n/* ---------------------------------------------------\n    SIDEBAR STYLE\n----------------------------------------------------- */\n#sidebar {\n    width: 250px;\n    position: fixed;\n    top: 0;\n    left: -250px;\n    height: 100vh;\n    z-index: 999;\n    background: #7386D5;\n    color: #fff;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n    overflow-y: scroll;\n    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);\n}\n#sidebar.active {\n    left: 0;\n}\n#dismiss {\n    width: 35px;\n    height: 35px;\n    line-height: 35px;\n    text-align: center;\n    background: #7386D5;\n    position: absolute;\n    top: 10px;\n    right: 10px;\n    cursor: pointer;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n}\n#dismiss:hover {\n    background: #fff;\n    color: #7386D5;\n}\n.overlay {\n    display: none;\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    background: rgba(0, 0, 0, 0.7);\n    z-index: 998;\n    opacity: 0;\n    -webkit-transition: all 0.5s ease-in-out;\n    transition: all 0.5s ease-in-out;\n}\n.overlay.active {\n    display: block;\n    opacity: 1;\n}\n#sidebar .sidebar-header {\n    padding: 20px;\n    background: #6d7fcc;\n}\n#sidebar ul.components {\n    padding: 20px 0;\n    border-bottom: 1px solid #47748b;\n}\n#sidebar ul p {\n    color: #fff;\n    padding: 10px;\n}\n#sidebar ul li a {\n    padding: 10px;\n    font-size: 1.1em;\n    display: block;\n}\n#sidebar ul li a:hover {\n    color: #7386D5;\n    background: #fff;\n}\n#sidebar ul li.active>a,\na[aria-expanded=\"true\"] {\n    color: #fff;\n    background: #6d7fcc;\n}\na[data-toggle=\"collapse\"] {\n    position: relative;\n}\n.dropdown-toggle::after {\n    display: block;\n    position: absolute;\n    top: 50%;\n    right: 20px;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\nul ul a {\n    font-size: 0.9em !important;\n    padding-left: 30px !important;\n    background: #6d7fcc;\n}\nul.CTAs {\n    padding: 20px;\n}\nul.CTAs a {\n    text-align: center;\n    font-size: 0.9em !important;\n    display: block;\n    border-radius: 5px;\n    margin-bottom: 5px;\n}\na.download {\n    background: #fff;\n    color: #7386D5;\n}\na.article,\na.article:hover {\n    background: #6d7fcc !important;\n    color: #fff !important;\n}\n/* ---------------------------------------------------\n    CONTENT STYLE\n----------------------------------------------------- */\n#content {\n    width: 100%;\n    padding: 20px;\n    min-height: 100vh;\n    -webkit-transition: all 0.3s;\n    transition: all 0.3s;\n    position: absolute;\n    top: 0;\n    right: 0;\n}\n#topNav\n{\n    /*width: 100%;*/\n}\n#sidebarNotCollapse\n{\n    background-color: #6d7fcc;\n    color: white;\n}\n#sidebarCollapse\n{\n    background-color: #6d7fcc;\n    color: white;\n}\n.footer\n{\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    min-height: 50px;\n    line-height: 50px;\n    background: rgb(248, 249, 250)\n}\n.footer #footer-text\n    {\n        -webkit-box-align: center;\n                align-items: center;\n    }\n.footer img\n    {\n        width: 35px;\n        height: 35px;\n        margin: 1rem 0rem 1rem 1rem;\n    }\n#logout-button-block\n{\n    position: static;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFJQSw2RUFBNkU7QUFKN0U7O0NBRUM7QUFHRDtJQUNJLGtDQUFrQztJQUNsQyxtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGtDQUFrQztJQUNsQyxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixXQUFXO0FBQ2Y7QUFFQTs7O0lBR0ksY0FBYztJQUNkLHFCQUFxQjtJQUNyQiw0QkFBb0I7SUFBcEIsb0JBQW9CO0FBQ3hCO0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLDBDQUEwQztBQUM5QztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLHdCQUF3QjtJQUN4QixZQUFZO0FBQ2hCO0FBRUE7SUFDSSxXQUFXO0lBQ1gsV0FBVztJQUNYLDhCQUE4QjtJQUM5QixjQUFjO0FBQ2xCO0FBRUE7O3VEQUV1RDtBQUV2RDtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YsTUFBTTtJQUNOLFlBQVk7SUFDWixhQUFhO0lBQ2IsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsNEJBQW9CO0lBQXBCLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsMENBQTBDO0FBQzlDO0FBRUE7SUFDSSxPQUFPO0FBQ1g7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxXQUFXO0lBQ1gsZUFBZTtJQUNmLDRCQUE0QjtJQUU1QixvQkFBb0I7QUFDeEI7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixjQUFjO0FBQ2xCO0FBRUE7SUFDSSxhQUFhO0lBQ2IsZUFBZTtJQUNmLFlBQVk7SUFDWixhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLFlBQVk7SUFDWixVQUFVO0lBQ1Ysd0NBQWdDO0lBQWhDLGdDQUFnQztBQUNwQztBQUNBO0lBQ0ksY0FBYztJQUNkLFVBQVU7QUFDZDtBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtBQUN2QjtBQUVBO0lBQ0ksZUFBZTtJQUNmLGdDQUFnQztBQUNwQztBQUVBO0lBQ0ksV0FBVztJQUNYLGFBQWE7QUFDakI7QUFFQTtJQUNJLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsY0FBYztBQUNsQjtBQUVBO0lBQ0ksY0FBYztJQUNkLGdCQUFnQjtBQUNwQjtBQUVBOztJQUVJLFdBQVc7SUFDWCxtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztJQUNkLGtCQUFrQjtJQUNsQixRQUFRO0lBQ1IsV0FBVztJQUNYLG1DQUEyQjtZQUEzQiwyQkFBMkI7QUFDL0I7QUFFQTtJQUNJLDJCQUEyQjtJQUMzQiw2QkFBNkI7SUFDN0IsbUJBQW1CO0FBQ3ZCO0FBRUE7SUFDSSxhQUFhO0FBQ2pCO0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsMkJBQTJCO0lBQzNCLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsa0JBQWtCO0FBQ3RCO0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztBQUNsQjtBQUVBOztJQUVJLDhCQUE4QjtJQUM5QixzQkFBc0I7QUFDMUI7QUFFQTs7dURBRXVEO0FBRXZEO0lBQ0ksV0FBVztJQUNYLGFBQWE7SUFDYixpQkFBaUI7SUFDakIsNEJBQW9CO0lBQXBCLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLFFBQVE7QUFDWjtBQUVBOztJQUVJLGVBQWU7QUFDbkI7QUFFQTs7SUFFSSx5QkFBeUI7SUFDekIsWUFBWTtBQUNoQjtBQUVBOztJQUVJLHlCQUF5QjtJQUN6QixZQUFZO0FBQ2hCO0FBRUE7O0lBRUksa0JBQWtCO0lBQ2xCLE9BQU87SUFDUCxRQUFRO0lBQ1IsU0FBUztJQUNULFdBQVc7SUFDWCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCO0FBQ0o7QUFFSTs7UUFFSSx5QkFBbUI7Z0JBQW5CLG1CQUFtQjtJQUN2QjtBQUVBOztRQUVJLFdBQVc7UUFDWCxZQUFZO1FBQ1osMkJBQTJCO0lBQy9CO0FBRUo7O0lBRUksZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICAgIERFTU8gU1RZTEVcbiovXG5cbkBpbXBvcnQgXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9UG9wcGluczozMDAsNDAwLDUwMCw2MDAsNzAwXCI7XG5ib2R5IHtcbiAgICBmb250LWZhbWlseTogJ1BvcHBpbnMnLCBzYW5zLXNlcmlmO1xuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XG59XG5cbnAge1xuICAgIGZvbnQtZmFtaWx5OiAnUG9wcGlucycsIHNhbnMtc2VyaWY7XG4gICAgZm9udC1zaXplOiAxLjFlbTtcbiAgICBmb250LXdlaWdodDogMzAwO1xuICAgIGxpbmUtaGVpZ2h0OiAxLjdlbTtcbiAgICBjb2xvcjogIzk5OTtcbn1cblxuYSxcbmE6aG92ZXIsXG5hOmZvY3VzIHtcbiAgICBjb2xvcjogaW5oZXJpdDtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG59XG5cbi5uYXZiYXIge1xuICAgIHBhZGRpbmc6IDE1cHggMTBweDtcbiAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIG1hcmdpbi1ib3R0b206IDQwcHg7XG4gICAgYm94LXNoYWRvdzogMXB4IDFweCAzcHggcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4ubmF2YmFyLWJ0biB7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcbiAgICBvdXRsaW5lOiBub25lICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiBub25lO1xufVxuXG4ubGluZSB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxcHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IGRhc2hlZCAjZGRkO1xuICAgIG1hcmdpbjogNDBweCAwO1xufVxuXG4vKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgICBTSURFQkFSIFNUWUxFXG4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAqL1xuXG4jc2lkZWJhciB7XG4gICAgd2lkdGg6IDI1MHB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogLTI1MHB4O1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgei1pbmRleDogOTk5O1xuICAgIGJhY2tncm91bmQ6ICM3Mzg2RDU7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGJveC1zaGFkb3c6IDNweCAzcHggM3B4IHJnYmEoMCwgMCwgMCwgMC4yKTtcbn1cblxuI3NpZGViYXIuYWN0aXZlIHtcbiAgICBsZWZ0OiAwO1xufVxuXG4jZGlzbWlzcyB7XG4gICAgd2lkdGg6IDM1cHg7XG4gICAgaGVpZ2h0OiAzNXB4O1xuICAgIGxpbmUtaGVpZ2h0OiAzNXB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kOiAjNzM4NkQ1O1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDEwcHg7XG4gICAgcmlnaHQ6IDEwcHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgLW8tdHJhbnNpdGlvbjogYWxsIDAuM3M7XG4gICAgdHJhbnNpdGlvbjogYWxsIDAuM3M7XG59XG5cbiNkaXNtaXNzOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgIGNvbG9yOiAjNzM4NkQ1O1xufVxuXG4ub3ZlcmxheSB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgd2lkdGg6IDEwMHZ3O1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjcpO1xuICAgIHotaW5kZXg6IDk5ODtcbiAgICBvcGFjaXR5OiAwO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGVhc2UtaW4tb3V0O1xufVxuLm92ZXJsYXkuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBvcGFjaXR5OiAxO1xufVxuXG4jc2lkZWJhciAuc2lkZWJhci1oZWFkZXIge1xuICAgIHBhZGRpbmc6IDIwcHg7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxuI3NpZGViYXIgdWwuY29tcG9uZW50cyB7XG4gICAgcGFkZGluZzogMjBweCAwO1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjNDc3NDhiO1xufVxuXG4jc2lkZWJhciB1bCBwIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuXG4jc2lkZWJhciB1bCBsaSBhIHtcbiAgICBwYWRkaW5nOiAxMHB4O1xuICAgIGZvbnQtc2l6ZTogMS4xZW07XG4gICAgZGlzcGxheTogYmxvY2s7XG59XG5cbiNzaWRlYmFyIHVsIGxpIGE6aG92ZXIge1xuICAgIGNvbG9yOiAjNzM4NkQ1O1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG59XG5cbiNzaWRlYmFyIHVsIGxpLmFjdGl2ZT5hLFxuYVthcmlhLWV4cGFuZGVkPVwidHJ1ZVwiXSB7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxuYVtkYXRhLXRvZ2dsZT1cImNvbGxhcHNlXCJdIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5kcm9wZG93bi10b2dnbGU6OmFmdGVyIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgcmlnaHQ6IDIwcHg7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG51bCB1bCBhIHtcbiAgICBmb250LXNpemU6IDAuOWVtICFpbXBvcnRhbnQ7XG4gICAgcGFkZGluZy1sZWZ0OiAzMHB4ICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYztcbn1cblxudWwuQ1RBcyB7XG4gICAgcGFkZGluZzogMjBweDtcbn1cblxudWwuQ1RBcyBhIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAwLjllbSAhaW1wb3J0YW50O1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBtYXJnaW4tYm90dG9tOiA1cHg7XG59XG5cbmEuZG93bmxvYWQge1xuICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgY29sb3I6ICM3Mzg2RDU7XG59XG5cbmEuYXJ0aWNsZSxcbmEuYXJ0aWNsZTpob3ZlciB7XG4gICAgYmFja2dyb3VuZDogIzZkN2ZjYyAhaW1wb3J0YW50O1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG59XG5cbi8qIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgIENPTlRFTlQgU1RZTEVcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICovXG5cbiNjb250ZW50IHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjNzO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IDA7XG4gICAgcmlnaHQ6IDA7XG59XG5cbiN0b3BOYXZcbntcbiAgICAvKndpZHRoOiAxMDAlOyovXG59XG5cbiNzaWRlYmFyTm90Q29sbGFwc2VcbntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmQ3ZmNjO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuI3NpZGViYXJDb2xsYXBzZVxue1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM2ZDdmY2M7XG4gICAgY29sb3I6IHdoaXRlO1xufVxuXG4uZm9vdGVyXG57XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDUwcHg7XG4gICAgbGluZS1oZWlnaHQ6IDUwcHg7XG4gICAgYmFja2dyb3VuZDogcmdiKDI0OCwgMjQ5LCAyNTApXG59XG5cbiAgICAuZm9vdGVyICNmb290ZXItdGV4dFxuICAgIHtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB9XG5cbiAgICAuZm9vdGVyIGltZ1xuICAgIHtcbiAgICAgICAgd2lkdGg6IDM1cHg7XG4gICAgICAgIGhlaWdodDogMzVweDtcbiAgICAgICAgbWFyZ2luOiAxcmVtIDByZW0gMXJlbSAxcmVtO1xuICAgIH1cblxuI2xvZ291dC1idXR0b24tYmxvY2tcbntcbiAgICBwb3NpdGlvbjogc3RhdGljO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -325,17 +366,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let AppComponent = class AppComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
         this.title = 'public';
         this.navbarOpen = false;
         this.hamburgerOpen = false;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
     }
     toggleNavbar() {
         this.navbarOpen = !this.navbarOpen;
@@ -343,9 +390,33 @@ let AppComponent = class AppComponent {
     toggleHamburger() {
         this.hamburgerOpen = !this.hamburgerOpen;
     }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+    logout() {
+        let observable = this._httpService.logout();
+        observable.subscribe(data => {
+            this.checkSession();
+            this._httpService.send(this.session);
+            location.reload();
+        });
+    }
 };
 AppComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -552,18 +623,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let HomePageModuleComponent = class HomePageModuleComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
+        this._httpService._stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
     }
 };
 HomePageModuleComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 HomePageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -590,12 +683,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/internal/BehaviorSubject */ "./node_modules/rxjs/internal/BehaviorSubject.js");
+/* harmony import */ var rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 let HttpService = class HttpService {
     constructor(_http) {
         this._http = _http;
+        this._stream$ = new rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]("");
+        this.stream$ = this._stream$.asObservable();
+    }
+    send(session) {
+        this._stream$.next(session);
+    }
+    checkSession() {
+        return this._http.get('/myriathon/session');
+    }
+    logout() {
+        return this._http.get('/myriathon/logout');
     }
     loginUser(loginUser) {
         return this._http.post('/myriathon/login/user', { loginUser: loginUser });
@@ -641,23 +748,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let MarathonPageModuleComponent = class MarathonPageModuleComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
         this.slides = [
             { src: "https://wallpapercave.com/wp/wp1980778.jpg" },
             { src: "/assets/img/myriathon_background.jpg" },
             { src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg" },
         ];
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
     }
 };
 MarathonPageModuleComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 MarathonPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -678,7 +807,7 @@ MarathonPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL215cmlhdGhvbi1wYWdlLW1vZHVsZS9teXJpYXRob24tcGFnZS1tb2R1bGUuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "/* not empty */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbXlyaWF0aG9uLXBhZ2UtbW9kdWxlL215cmlhdGhvbi1wYWdlLW1vZHVsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGNBQWMiLCJmaWxlIjoic3JjL2FwcC9teXJpYXRob24tcGFnZS1tb2R1bGUvbXlyaWF0aG9uLXBhZ2UtbW9kdWxlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBub3QgZW1wdHkgKi8iXX0= */"
 
 /***/ }),
 
@@ -695,18 +824,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let MyriathonPageModuleComponent = class MyriathonPageModuleComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
     }
 };
 MyriathonPageModuleComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 MyriathonPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -727,7 +878,7 @@ MyriathonPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"](
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".row\n{\n    margin-bottom: 1rem;\n}\n\n#image-wrapper\n{\n    width: 100%;\n    min-height: 650px;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n    background-image: url(\"https://wallpapercave.com/wp/wp1980778.jpg\");\n}\n\n#homeText\n{\n    position: absolute;\n    bottom: 0px;\n    margin-left: 300px;\n    margin-bottom: 100px;\n    z-index: 2;\n    background: rgba(128,128,128, 0.7);\n    padding: 15px;\n    border-radius: 8px;\n    box-shadow: 10px 10px 5px black;\n}\n\n#homeText h3, p\n    {\n        color: white;\n        opacity: 1;\n    }\n\n#homeText a\n    {\n        color: lightblue;\n        text-decoration: none;\n        background-color: transparent;\n    }\n\n#homeText button\n    {\n        background-color: #6d7fcc;\n        color: white;\n        opacity: 1;\n    }\n\n#homeText button:hover\n        {\n            color: #6d7fcc;\n            background-color: white;\n            border: 1px solid #6d7fcc;\n            -webkit-transform: translateY(-3px);\n                    transform: translateY(-3px);\n            box-shadow: 3px 3px 10px black;\n        }\n\n#homeText button:active\n        {\n            box-shadow: 3px 3px 10px black;\n            -webkit-transform: translateY(2px);\n                    transform: translateY(2px);\n        }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW9zLXBhZ2UtbW9kdWxlL3ZpZGVvcy1wYWdlLW1vZHVsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQixtRUFBbUU7QUFDdkU7O0FBRUE7O0lBRUksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0lBQ3BCLFVBQVU7SUFDVixrQ0FBa0M7SUFDbEMsYUFBYTtJQUNiLGtCQUFrQjtJQUNsQiwrQkFBK0I7QUFDbkM7O0FBRUk7O1FBRUksWUFBWTtRQUNaLFVBQVU7SUFDZDs7QUFFQTs7UUFFSSxnQkFBZ0I7UUFDaEIscUJBQXFCO1FBQ3JCLDZCQUE2QjtJQUNqQzs7QUFFQTs7UUFFSSx5QkFBeUI7UUFDekIsWUFBWTtRQUNaLFVBQVU7SUFDZDs7QUFFSTs7WUFFSSxjQUFjO1lBQ2QsdUJBQXVCO1lBQ3ZCLHlCQUF5QjtZQUN6QixtQ0FBMkI7b0JBQTNCLDJCQUEyQjtZQUMzQiw4QkFBOEI7UUFDbEM7O0FBRUE7O1lBRUksOEJBQThCO1lBQzlCLGtDQUEwQjtvQkFBMUIsMEJBQTBCO1FBQzlCIiwiZmlsZSI6InNyYy9hcHAvdmlkZW9zLXBhZ2UtbW9kdWxlL3ZpZGVvcy1wYWdlLW1vZHVsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnJvd1xue1xuICAgIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5cbiNpbWFnZS13cmFwcGVyXG57XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWluLWhlaWdodDogNjUwcHg7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly93YWxscGFwZXJjYXZlLmNvbS93cC93cDE5ODA3NzguanBnXCIpO1xufVxuXG4jaG9tZVRleHRcbntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IDMwMHB4O1xuICAgIG1hcmdpbi1ib3R0b206IDEwMHB4O1xuICAgIHotaW5kZXg6IDI7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxMjgsMTI4LDEyOCwgMC43KTtcbiAgICBwYWRkaW5nOiAxNXB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBib3gtc2hhZG93OiAxMHB4IDEwcHggNXB4IGJsYWNrO1xufVxuXG4gICAgI2hvbWVUZXh0IGgzLCBwXG4gICAge1xuICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgIG9wYWNpdHk6IDE7XG4gICAgfVxuXG4gICAgI2hvbWVUZXh0IGFcbiAgICB7XG4gICAgICAgIGNvbG9yOiBsaWdodGJsdWU7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgfVxuXG4gICAgI2hvbWVUZXh0IGJ1dHRvblxuICAgIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzZkN2ZjYztcbiAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cblxuICAgICAgICAjaG9tZVRleHQgYnV0dG9uOmhvdmVyXG4gICAgICAgIHtcbiAgICAgICAgICAgIGNvbG9yOiAjNmQ3ZmNjO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjNmQ3ZmNjO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zcHgpO1xuICAgICAgICAgICAgYm94LXNoYWRvdzogM3B4IDNweCAxMHB4IGJsYWNrO1xuICAgICAgICB9XG5cbiAgICAgICAgI2hvbWVUZXh0IGJ1dHRvbjphY3RpdmVcbiAgICAgICAge1xuICAgICAgICAgICAgYm94LXNoYWRvdzogM3B4IDNweCAxMHB4IGJsYWNrO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDJweCk7XG4gICAgICAgIH0iXX0= */"
+module.exports = "body\n{\n    margin-bottom: 10rem;\n}\n\n.row\n{\n    margin-bottom: 1rem;\n}\n\n#image-wrapper\n{\n    width: 100%;\n    min-height: 650px;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n    background-image: url(\"https://wallpapercave.com/wp/wp1980778.jpg\");\n}\n\n#homeText\n{\n    position: absolute;\n    bottom: 0px;\n    margin-left: 300px;\n    margin-bottom: 100px;\n    z-index: 2;\n    background: rgba(128,128,128, 0.7);\n    padding: 15px;\n    border-radius: 8px;\n    box-shadow: 10px 10px 5px black;\n}\n\n#homeText h3, p\n    {\n        color: white;\n        opacity: 1;\n    }\n\n#homeText a\n    {\n        color: lightblue;\n        text-decoration: none;\n        background-color: transparent;\n    }\n\n#homeText button\n    {\n        background-color: #6d7fcc;\n        color: white;\n        opacity: 1;\n    }\n\n#homeText button:hover\n        {\n            color: #6d7fcc;\n            background-color: white;\n            border: 1px solid #6d7fcc;\n            -webkit-transform: translateY(-3px);\n                    transform: translateY(-3px);\n            box-shadow: 3px 3px 10px black;\n        }\n\n#homeText button:active\n        {\n            box-shadow: 3px 3px 10px black;\n            -webkit-transform: translateY(2px);\n                    transform: translateY(2px);\n        }\n\n#videoCardsRow\n{\n    margin-bottom: 1rem;\n}\n\n.card-body p\n{\n    color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlkZW9zLXBhZ2UtbW9kdWxlL3ZpZGVvcy1wYWdlLW1vZHVsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLG9CQUFvQjtBQUN4Qjs7QUFFQTs7SUFFSSxtQkFBbUI7QUFDdkI7O0FBRUE7O0lBRUksV0FBVztJQUNYLGlCQUFpQjtJQUNqQiwyQkFBMkI7SUFDM0IsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsbUVBQW1FO0FBQ3ZFOztBQUVBOztJQUVJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLG9CQUFvQjtJQUNwQixVQUFVO0lBQ1Ysa0NBQWtDO0lBQ2xDLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsK0JBQStCO0FBQ25DOztBQUVJOztRQUVJLFlBQVk7UUFDWixVQUFVO0lBQ2Q7O0FBRUE7O1FBRUksZ0JBQWdCO1FBQ2hCLHFCQUFxQjtRQUNyQiw2QkFBNkI7SUFDakM7O0FBRUE7O1FBRUkseUJBQXlCO1FBQ3pCLFlBQVk7UUFDWixVQUFVO0lBQ2Q7O0FBRUk7O1lBRUksY0FBYztZQUNkLHVCQUF1QjtZQUN2Qix5QkFBeUI7WUFDekIsbUNBQTJCO29CQUEzQiwyQkFBMkI7WUFDM0IsOEJBQThCO1FBQ2xDOztBQUVBOztZQUVJLDhCQUE4QjtZQUM5QixrQ0FBMEI7b0JBQTFCLDBCQUEwQjtRQUM5Qjs7QUFFUjs7SUFFSSxtQkFBbUI7QUFDdkI7O0FBRUE7O0lBRUksWUFBWTtBQUNoQiIsImZpbGUiOiJzcmMvYXBwL3ZpZGVvcy1wYWdlLW1vZHVsZS92aWRlb3MtcGFnZS1tb2R1bGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHlcbntcbiAgICBtYXJnaW4tYm90dG9tOiAxMHJlbTtcbn1cblxuLnJvd1xue1xuICAgIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5cbiNpbWFnZS13cmFwcGVyXG57XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWluLWhlaWdodDogNjUwcHg7XG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly93YWxscGFwZXJjYXZlLmNvbS93cC93cDE5ODA3NzguanBnXCIpO1xufVxuXG4jaG9tZVRleHRcbntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IDMwMHB4O1xuICAgIG1hcmdpbi1ib3R0b206IDEwMHB4O1xuICAgIHotaW5kZXg6IDI7XG4gICAgYmFja2dyb3VuZDogcmdiYSgxMjgsMTI4LDEyOCwgMC43KTtcbiAgICBwYWRkaW5nOiAxNXB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBib3gtc2hhZG93OiAxMHB4IDEwcHggNXB4IGJsYWNrO1xufVxuXG4gICAgI2hvbWVUZXh0IGgzLCBwXG4gICAge1xuICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgIG9wYWNpdHk6IDE7XG4gICAgfVxuXG4gICAgI2hvbWVUZXh0IGFcbiAgICB7XG4gICAgICAgIGNvbG9yOiBsaWdodGJsdWU7XG4gICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgfVxuXG4gICAgI2hvbWVUZXh0IGJ1dHRvblxuICAgIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzZkN2ZjYztcbiAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cblxuICAgICAgICAjaG9tZVRleHQgYnV0dG9uOmhvdmVyXG4gICAgICAgIHtcbiAgICAgICAgICAgIGNvbG9yOiAjNmQ3ZmNjO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjNmQ3ZmNjO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zcHgpO1xuICAgICAgICAgICAgYm94LXNoYWRvdzogM3B4IDNweCAxMHB4IGJsYWNrO1xuICAgICAgICB9XG5cbiAgICAgICAgI2hvbWVUZXh0IGJ1dHRvbjphY3RpdmVcbiAgICAgICAge1xuICAgICAgICAgICAgYm94LXNoYWRvdzogM3B4IDNweCAxMHB4IGJsYWNrO1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDJweCk7XG4gICAgICAgIH1cblxuI3ZpZGVvQ2FyZHNSb3dcbntcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xufVxuXG4uY2FyZC1ib2R5IHBcbntcbiAgICBjb2xvcjogYmxhY2s7XG59Il19 */"
 
 /***/ }),
 
@@ -744,18 +895,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let VideosPageModuleComponent = class VideosPageModuleComponent {
-    constructor(_httpService) {
+    constructor(_httpService, router) {
         this._httpService = _httpService;
+        this.router = router;
+        this.dropdownOpen = false;
+        this.video1 = {
+            title: "This is a test video",
+            img: "assets/img/rhea.jpg",
+            description: "This is for video 1",
+        };
+        this.video2 = {
+            title: "This is a test video",
+            img: "assets/img/rhea.jpg",
+            description: "This is for video 2",
+        };
+        this.season = {
+            name: "Season 1",
+            number: 1,
+            videos: [this.video1]
+        };
+        this.season2 = {
+            name: "Season 2",
+            number: 2,
+            videos: [this.video2]
+        };
+        this.clearSeason = {
+            name: "Clear season",
+            number: 0,
+            videos: [],
+        };
+        this.allSeasons = [this.season, this.season2, this.clearSeason];
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    activeSeason(seasonNumber) {
+        if (seasonNumber == 0) {
+            this.activeSeasonNumber = null;
+        }
+        this.activeSeasonNumber = seasonNumber;
+        console.log(this.activeSeasonNumber);
+    }
+    toggleDropdown() {
+        this.dropdownOpen = !this.dropdownOpen;
+        console.log(this.dropdownOpen);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
     }
 };
 VideosPageModuleComponent.ctorParameters = () => [
-    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] }
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 VideosPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
