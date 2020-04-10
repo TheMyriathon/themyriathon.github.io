@@ -100,6 +100,17 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/single-video-module/single-video-module.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/single-video-module/single-video-module.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{singleVideo.title}}</p>\n<iframe \nwidth=\"560\" \nheight=\"315\" \n[src]=\"url\"\nframeborder=\"0\" \nallow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \nallowfullscreen>\n</iframe>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/videos-page-module/videos-page-module.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/videos-page-module/videos-page-module.component.html ***!
@@ -107,7 +118,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>Recent Video</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown button\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of allSeasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of allSeasons[activeSeasonNumber-1].videos\" class = \"col\">\n                    <div class=\"card\" style=\"width: 18rem;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                            <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n\n"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>Recent Video</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown button\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of allSeasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of allSeasons[activeSeasonNumber-1].videos\" class = \"col\">\n                    <div class=\"card\" style=\"width: 18rem;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                            <a [routerLink] = \"[video.title]\" class=\"btn btn-primary\">Go somewhere</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n\n"
 
 /***/ }),
 
@@ -311,6 +322,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _videos_page_module_videos_page_module_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./videos-page-module/videos-page-module.component */ "./src/app/videos-page-module/videos-page-module.component.ts");
 /* harmony import */ var _about_page_module_about_page_module_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about-page-module/about-page-module.component */ "./src/app/about-page-module/about-page-module.component.ts");
 /* harmony import */ var _admin_login_module_admin_login_module_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./admin-login-module/admin-login-module.component */ "./src/app/admin-login-module/admin-login-module.component.ts");
+/* harmony import */ var _single_video_module_single_video_module_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./single-video-module/single-video-module.component */ "./src/app/single-video-module/single-video-module.component.ts");
+
 
 
 
@@ -328,6 +341,7 @@ const routes = [
     { path: 'videos', component: _videos_page_module_videos_page_module_component__WEBPACK_IMPORTED_MODULE_6__["VideosPageModuleComponent"] },
     { path: 'about', component: _about_page_module_about_page_module_component__WEBPACK_IMPORTED_MODULE_7__["AboutPageModuleComponent"] },
     { path: 'admin', component: _admin_login_module_admin_login_module_component__WEBPACK_IMPORTED_MODULE_8__["AdminLoginModuleComponent"] },
+    { path: 'videos/:title', component: _single_video_module_single_video_module_component__WEBPACK_IMPORTED_MODULE_9__["SingleVideoModuleComponent"] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -456,6 +470,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_page_module_about_page_module_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./about-page-module/about-page-module.component */ "./src/app/about-page-module/about-page-module.component.ts");
 /* harmony import */ var _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./carousel/carousel.component */ "./src/app/carousel/carousel.component.ts");
 /* harmony import */ var _admin_login_module_admin_login_module_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./admin-login-module/admin-login-module.component */ "./src/app/admin-login-module/admin-login-module.component.ts");
+/* harmony import */ var _single_video_module_single_video_module_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./single-video-module/single-video-module.component */ "./src/app/single-video-module/single-video-module.component.ts");
+
 
 
 
@@ -484,7 +500,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _videos_page_module_videos_page_module_component__WEBPACK_IMPORTED_MODULE_12__["VideosPageModuleComponent"],
             _about_page_module_about_page_module_component__WEBPACK_IMPORTED_MODULE_13__["AboutPageModuleComponent"],
             _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_14__["CarouselComponent"],
-            _admin_login_module_admin_login_module_component__WEBPACK_IMPORTED_MODULE_15__["AdminLoginModuleComponent"]
+            _admin_login_module_admin_login_module_component__WEBPACK_IMPORTED_MODULE_15__["AdminLoginModuleComponent"],
+            _single_video_module_single_video_module_component__WEBPACK_IMPORTED_MODULE_16__["SingleVideoModuleComponent"]
         ],
         schemas: [
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"],
@@ -866,6 +883,130 @@ MyriathonPageModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"](
         styles: [__webpack_require__(/*! ./myriathon-page-module.component.css */ "./src/app/myriathon-page-module/myriathon-page-module.component.css")]
     })
 ], MyriathonPageModuleComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/single-video-module/single-video-module.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/single-video-module/single-video-module.component.css ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NpbmdsZS12aWRlby1tb2R1bGUvc2luZ2xlLXZpZGVvLW1vZHVsZS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/single-video-module/single-video-module.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/single-video-module/single-video-module.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: SingleVideoModuleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SingleVideoModuleComponent", function() { return SingleVideoModuleComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+
+
+
+
+
+let SingleVideoModuleComponent = class SingleVideoModuleComponent {
+    constructor(_httpService, router, route, sanitizer) {
+        this._httpService = _httpService;
+        this.router = router;
+        this.route = route;
+        this.sanitizer = sanitizer;
+        this.video1 = {
+            title: "This is a test video",
+            img: "assets/img/rhea.jpg",
+            description: "This is for video 1",
+            URL: "https://www.youtube.com/embed/C9LXztFEOiw",
+        };
+        this.video2 = {
+            title: "This is a test video",
+            img: "assets/img/rhea.jpg",
+            description: "This is for video 2",
+            URL: "https://www.youtube.com/embed/IMBp7N_iEzw",
+        };
+        this.season = {
+            name: "Season 1",
+            number: 1,
+            videos: [this.video1]
+        };
+        this.season2 = {
+            name: "Season 2",
+            number: 2,
+            videos: [this.video2]
+        };
+        this.clearSeason = {
+            name: "Clear season",
+            number: 0,
+            videos: [],
+        };
+        this.allSeasons = [this.season, this.season2, this.clearSeason];
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
+    }
+    ngOnInit() {
+        this.title = this.route.snapshot.paramMap.get("title");
+        console.log(this.title);
+        this.checkVideo();
+        this.getSafeUrl(this.singleVideo.URL);
+        this.checkSession();
+        this.receiveMessage(this.session);
+    }
+    checkVideo() {
+        for (var i = 0; i < this.allSeasons.length; i++) {
+            for (var j = 0; j < this.allSeasons[i].videos.length; j++) {
+                if (this.title == this.allSeasons[i].videos[j].title) {
+                    this.singleVideo = this.allSeasons[i].videos[j];
+                }
+            }
+        }
+        if (this.singleVideo == null) {
+            this.router.navigateByUrl('home');
+        }
+    }
+    getSafeUrl(url) {
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+};
+SingleVideoModuleComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }
+];
+SingleVideoModuleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-single-video-module',
+        template: __webpack_require__(/*! raw-loader!./single-video-module.component.html */ "./node_modules/raw-loader/index.js!./src/app/single-video-module/single-video-module.component.html"),
+        styles: [__webpack_require__(/*! ./single-video-module.component.css */ "./src/app/single-video-module/single-video-module.component.css")]
+    })
+], SingleVideoModuleComponent);
 
 
 
